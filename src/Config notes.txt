@@ -30,6 +30,27 @@
 			         
        
       
-                 
-  
+                
+      2.with web.xml
+               we can use Web.xml to do same as annotation 
+           
+          syntax : 
+             In web.xml
+                  	<servlet>
+						<servlet-name>ConfigWithXMl</servlet-name>
+						<servlet-class>com.Servlet.config.ConfigWithWebXml</servlet-class>
+						<init-param>
+							<param-name>user</param-name>
+							<param-value>root</param-value>
+						</init-param>
+						<init-param>
+							<param-name>pass</param-name>
+							<param-value>root</param-value>
+						</init-param>
+						</servlet>
+						<servlet-mapping>
+							<servlet-name>ConfigWithXMl</servlet-name>
+							<url-pattern>/configxml</url-pattern>
+						</servlet-mapping>
+                  
               

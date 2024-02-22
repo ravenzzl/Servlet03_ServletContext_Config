@@ -1,0 +1,35 @@
+
+1.ServletConfig 
+
+           *if we want store some value in different place where no need to touch the code , like dburl,dbuser,dbpassword , we can ServeltConfig
+           *but only difference between servletcontext and config is 
+                 *context is application level where if we assign some value it same for all files servlets and jsp
+                 *but config is different where we assgin value for particular class                 
+      
+        we can achieve Config by two differnet ways
+           1.annotations
+           2.using web.xml
+    
+    1.annotation 
+            we can use annotation config by using below code 
+        syntax : 
+           
+           in web.xml :
+           
+             @WebServlet( urlPatterns = {"/ConfigWithAnnotation"} 
+			,initParams = {
+			 @WebInitParam(name="user",value="root"),
+			 @WebInitParam(name="pass",value="root")
+			 })
+		  
+		  in servlet code to retrieve config data
+		    
+		     	String user=config.getInitParameter("user");
+			    String pass=config.getInitParameter("pass"); 
+			 
+			         
+       
+      
+                 
+  
+              

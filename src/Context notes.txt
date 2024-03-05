@@ -1,0 +1,21 @@
+1.ServeltContext
+
+if we want same data in all our servlet files in our project by using Servlet-context
+ 
+          first need to configure what are values we need in web.xml
+             syntax : -
+                   <context-param>
+        			  <param-name>databaseUrl</param-name>
+        			  <param-value>jdbc:mysql://localhost/mydb</param-value>
+    			    </context-param>
+                   
+         we can get this value in any servlet and jsp in our project by using below syntax
+              
+              syntax :-
+                 ServletContext context=req.getServletContext();  // this in doPost or doGet 
+		         String dburl=context.getInitParameter("databaseUrl");
+		         
+		         
+		         //if it is init() or some other method where can access HttpServletRequest , we direct get getServletContext()
+		          ServletContext context=getServletContext();
+		        
